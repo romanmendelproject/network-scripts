@@ -1,0 +1,18 @@
+2020-06-12 09:29:29,067 - manage_bgp - DEBUG - Start set_command
+2020-06-12 09:29:29,068 - manage_bgp - DEBUG - Start check_amount_active_session
+2020-06-12 09:29:29,068 - manage_bgp - DEBUG - Start bird_commands
+2020-06-12 09:29:29,068 - manage_bgp - INFO - Connection BIRD 192.168.0.15
+2020-06-12 09:29:31,411 - manage_bgp - INFO - BGP session DOWN
+2020-06-12 09:29:31,412 - manage_bgp - DEBUG - End  bird_commands
+2020-06-12 09:29:31,412 - manage_bgp - DEBUG - Start router_bgp_status
+2020-06-12 09:29:31,412 - manage_bgp - INFO - Connection router 192.168.0.20
+2020-06-12 09:29:37,706 - manage_bgp - ERROR - No SNMP response received before timeout
+2020-06-12 09:29:37,706 - manage_bgp - DEBUG - End  router_bgp_status
+2020-06-12 09:29:37,707 - manage_bgp - DEBUG - Start router_bgp_status
+2020-06-12 09:29:37,707 - manage_bgp - INFO - Connection router 192.168.0.30
+2020-06-12 09:29:44,029 - manage_bgp - ERROR - No SNMP response received before timeout
+2020-06-12 09:29:44,029 - manage_bgp - DEBUG - End  router_bgp_status
+2020-06-12 09:29:44,029 - manage_bgp - INFO - Active BGP session number: 0
+2020-06-12 09:29:44,030 - manage_bgp - DEBUG - End  check_amount_active_session
+2020-06-12 09:29:44,030 - manage_bgp - INFO - Active BGP session BEELINE < 2
+2020-06-12 09:29:44,030 - manage_bgp - DEBUG - End  set_command
