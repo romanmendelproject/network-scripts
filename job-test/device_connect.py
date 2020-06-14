@@ -115,21 +115,16 @@ def router_commands(ip, operator, action):
         return ('Error')
 
 
-class CommandError(Exception):
-    def __init__(self, value):
-        self.value = value
-
-
 def do_login(ip):
     try:
         tn = telnetlib.Telnet(ip)
         res = tn.read_until(b'Password:', 5)
         if res.find(b'Password:') == -1:
-            raise CommandError('No password prompt or empty login.')
+            logger.error(f'No password prompt or empty login.')
         tn.write(b'cisco\n')
         res = tn.read_until(b'#', 3)
         if res.find(b'#') == -1:
-            raise CommandError('No command prompt or wrong login/password.')
+            logger.error(f'No command prompt or wrong login/password.')
         logger.info(f'Telnet connected')
         return tn
     except Exception as e:
