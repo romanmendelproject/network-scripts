@@ -121,10 +121,12 @@ def do_login(ip):
         res = tn.read_until(b'Password:', 5)
         if res.find(b'Password:') == -1:
             logger.error(f'No password prompt or empty login.')
+            return 'Error'
         tn.write(b'cisco\n')
         res = tn.read_until(b'#', 3)
         if res.find(b'#') == -1:
             logger.error(f'No command prompt or wrong login/password.')
+            return 'Error'
         logger.info(f'Telnet connected')
         return tn
     except Exception as e:
